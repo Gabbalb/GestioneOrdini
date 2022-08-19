@@ -1,6 +1,16 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
+
+struct prodotto{
+    string nome;
+    string codice; //TODO: f per calcoare codice prodotto
+    string prezzo;
+    string tempoDiArrivo;
+};
+
+//TODO: matrice prodotti;
 
 struct ordine{
     string numero;
@@ -8,6 +18,12 @@ struct ordine{
     string costo;
     string tempoDiArrivo;
     string Operatore;
+};
+
+struct operatore{
+    string nome;
+    string cognome;
+    string codice; //TODO: f per calcolare codice
 };
 
 void menu (){
@@ -21,6 +37,23 @@ void menu (){
     cout << "___________________________________" << endl;
     cout << "         Scegli dal menu           " << endl;
 }
+
+void Ordine (){
+
+    ofstream out ("ordini.txt");
+    int Choose;
+    int val;
+    cout <<"1) inserisci in numero dell'oggetto; 2) mostra oggetti in lista"<<endl;
+    cin >> Choose;
+    if (Choose == 1){
+        cout << "inserisci nome" << endl;
+        cin >> val;
+        out << val << ";";
+    } else {
+        //TODO: funzione per mostrare matrice ordini
+    }
+}
+
 
 int main() {
     int choice;
