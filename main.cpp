@@ -2,12 +2,22 @@
 
 using namespace std;
 
+struct ordine{
+    string numero;
+    string oggetto;
+    string costo;
+    string tempoDiArrivo;
+    string Operatore;
+};
+
 void menu (){
     cout << "----------Gestione ordini----------" << endl;
     cout << "-----------Pincopallotek-----------" << endl;
     cout << "1) Crea nuovo ordine" << endl;
     cout << "2) Modifica nuovo ordine" << endl;
     cout << "3) Mostra lista ordini" <<endl;
+    cout << "4) Aggiungi un nuovo operatore" <<endl;
+    cout << "5) Aggiungi un nuovo prodotto" <<endl;
     cout << "___________________________________" << endl;
     cout << "         Scegli dal menu           " << endl;
 }
@@ -38,6 +48,7 @@ int main() {
                 cout << "Scelta inesistente" << endl;
         }
     } while (control == 1);
+
 
     return 0;
 }
